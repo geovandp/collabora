@@ -27,6 +27,7 @@ Route::get('/', [PageController::class, 'dashboard']);
 Route::get('/event', [PageController::class, 'event']);
 
 Route::get('/dashboard', [SessionController::class, 'dashboard']);
+Route::get('/dashboard', [SessionController::class, 'login']);
 
 
 

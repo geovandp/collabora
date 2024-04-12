@@ -1,8 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-<body>
-
     <div class="w-50 center border rounded px-3 py-3 mx-auto">
         <h1>Login</h1>
         <form action="/login" method="POST">
@@ -21,5 +19,4 @@
         </form>
     </div>
 
-</body>
 @endsection
