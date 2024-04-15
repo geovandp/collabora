@@ -9,7 +9,7 @@ class SessionController extends Controller
 {
     //
     function dashboard() {
-        return view("dashboard");
+        return view("page/dashboard");
     }
 
     function login(Request $request) {

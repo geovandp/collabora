@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SessionController;
 
@@ -15,19 +16,21 @@ use App\Http\Controllers\SessionController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // });
+Route::get('event', [EventController::class, 'index']);
+Route::get('event/{id}', [EventController::class, 'detail'])->where('id', '[0-9]+');
 
 Route::get('/', [PageController::class, 'dashboard']);
-Route::get('/event', [PageController::class, 'event']);
+// Route::get('/event', [PageController::class, 'event']);
 
 Route::get('/dashboard', [SessionController::class, 'dashboard']);
-Route::get('/dashboard', [SessionController::class, 'login']);
+Route::post('/dashboard/login', [SessionController::class, 'login']);
 
 
 
