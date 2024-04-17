@@ -15,5 +15,5 @@ class PageController extends Controller
         return view("page/event");
     }
 
-
+    
 }
